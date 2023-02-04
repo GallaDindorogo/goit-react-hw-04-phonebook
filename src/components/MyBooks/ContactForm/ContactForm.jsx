@@ -17,7 +17,7 @@ const ContactForm = ({ onSubmit }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    onSubmit({ name, number });
+    onSubmit({ ...state });
     setState({ ...initialState });
   };
 
@@ -61,4 +61,3 @@ export default ContactForm;
 ContactForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
-
